@@ -1,6 +1,9 @@
 name: Pylint
 
-on: [push]
+# Run this workflow on merge to the main branch
+on:
+  push:
+    branches: [ main ]
 
 jobs:
   build:

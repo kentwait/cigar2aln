@@ -59,12 +59,12 @@ def main(
             try:
                 target_rec = target_seq_dict[target_id]
             except KeyError:
-                print(f'Could not find {target_id} entry in target file {target_path}.')
+                print(f'Could not find {target_id} entry in target file {target_path}. Skipping line {i+1}.')
                 continue
             try:
                 query_rec = query_seq_dict[query_id]
             except KeyError:
-                print(f'Could not find {query_id} entry in query file {query_path}.')
+                print(f'Could not find {query_id} entry in query file {query_path}. Skipping line {i+1}.')
                 continue
             
             print(f'Processing {query_id} vs {target_id}...')
